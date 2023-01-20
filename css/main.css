@@ -315,7 +315,7 @@ template {
 @font-face {
   font-family: CalSans;
   font-display: swap;
-  src: url("../fonts/webfonts/CalSans-SemiBold.woff2") format("woff2") url("../fonts/webfonts/CalSans-SemiBold.woff") format("woff");
+  src: url("../fonts/CalSans-SemiBold.woff2") format("woff2") url("../../fonts/CalSans-SemiBold.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -416,6 +416,12 @@ li {
       align-self: flex-end;
   padding-bottom: 60px;
   padding-right: 20px;
+}
+.main__title {
+  font-family: CalSans;
+  color: #121212;
+  font-size: 56px;
+  line-height: 67px;
 }
 .action-main__button {
   padding: 18.5px 48px;

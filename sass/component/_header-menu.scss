@@ -1,0 +1,15 @@
+.menu {
+    &__list {
+        display: flex;
+        gap: 56px;
+    }
+    &__item {}
+    &__link {
+        color: rgba(18, 18, 18, 0.4);
+        font-weight: 500;
+
+    }
+    &__link:hover {
+        text-decoration: underline;
+    }
+}

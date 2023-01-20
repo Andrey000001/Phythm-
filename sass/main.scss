@@ -1,0 +1,12 @@
+// Normalize
+@import './vendors/normalize';
+// Шрифт
+@import './vendors/font';
+// ОБНУЛИЕНИЕ 
+@import './utils/utilits';
+
+
+// Header 
+@import './component/header';
+@import './component/header-menu';
+@import './component/page';

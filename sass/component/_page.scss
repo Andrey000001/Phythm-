@@ -1,42 +1,116 @@
 .page {
     flex: 1 1 auto;
-
 }
 
 .main {
+    flex: 1 1 auto;
     padding-bottom: 80px;
+
     &__container {
         display: flex;
     }
     &__content {
+        flex: 0 1 50%;
         align-self: flex-end;
+        padding-top: 120px;
         padding-bottom: 60px;
         padding-right: 20px;
+        @media (max-width: 1092px) {
+            flex: 0 0 60%;
+            padding-bottom: 0;   
+        }
+        @media screen and (max-width: 767px) {
+            flex: 1 0 100%;
+            padding-top: 80px;
+            padding-right: 0;
+        }
     }
+
     &__title {
-        font-family: CalSans;
+        font-family: "CalSans",CalSans;
         color: #121212;
         font-size: 56px;
-        line-height: 67px;
+        line-height: 1.2;
+        @media screen and (max-width: 767px) {
+            font-size: 44px;
+        }
+        span {
+            color: #ff6428;
+        }
+    }
+    &__title:not(:last-child) {
+        margin-bottom: 16px;
     }
     &__text {
-
+        line-height: 24px;
+        font-weight: 500;
+        max-width: 420px;
     }
-    &__actions {}
+    &__text:not(:last-child) {
+        margin-bottom: 33px;
+    }
+
+    &__decor {
+        flex: 0 1 50%;
+        @media screen and (max-width: 1092px) {
+            flex: 0 0 30%;
+        }
+    }
+   
+    &__images {
+        display: inline-block;
+        position: relative;
+        margin-right: -135px;
+        @media screen and (max-width:767px) {
+            display: none;
+        }
+        img {
+            max-width: 672px;
+            @media screen and (max-width:1092px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__images::after {
+        content: " ";
+        background: url("../img/decor.svg") 0 0 no-repeat;
+        position: absolute;
+        bottom: 0;
+        width: 80px;
+        height: 80px;
+        right: 36.3%;
+        transform: translate(0, 50%);
+    }
 }
 
-.actions__main {
-}
-
-.action-main__button {
-    padding: 18.5px 48px;
-    background-color: #FF6428;
-    border-radius: 40px;
-    color: #fff;
-    line-height: 24px;
-    font-weight: 600;
-
-    &__icon {
-
+.actions-main {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 479.89px) {
+        flex-wrap: wrap;    
+        justify-content: center;
+    }
+    &__button {
+        padding: 18.5px 48px;
+        background-color: #FF6428;
+        border-radius: 40px;
+        text-align: center;
+        color: #fff;
+        line-height: 24px;
+        font-weight: 600;
+        @media screen and (max-width: 479.89px) {
+            flex: 1 1 100%;
+        }
+    }
+    &__button:not(:last-child) {
+        margin-right: 40px;
+        @media screen and (max-width: 479.89px) {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+    &__icon:not(:last-child) {
+        margin-right: 27px;
     }
 }

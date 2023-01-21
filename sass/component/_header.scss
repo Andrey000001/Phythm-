@@ -7,18 +7,21 @@
     
     &__container {
         display: flex;
-        gap: 131px;
         padding-top: 5px;
         padding-bottom: 5px;
         min-height: 152px;
         align-items: center;
+        @media screen and (max-width: 1092px) {
+            min-height: 100px;
+        }
+        @media screen and (max-width: 767px) {
+            min-height: 60px;
+        }
     }
-
     &__logo {
-
+        @media screen and (max-width: 479.98px) {
+            overflow: hidden;
+            flex: 0 0 28px;
+        }
     }
-    &__menu {
-
-    }
-
 }

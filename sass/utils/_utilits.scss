@@ -27,7 +27,20 @@ li {
     display: flex;
     flex-direction: column;
 }
-
+.title {
+    font-family: CalSans;
+    color: #121212;
+    font-size: 44px;
+    line-height: 1.2;
+    text-align: center;
+    
+    span {
+        color: #ff6428;
+    }
+    @media screen and (max-width: 767.98px) {
+        font-size: 38px;
+    }
+}
 [class*="__container"] {
     max-width: 1230px;
     margin: 0 auto;
